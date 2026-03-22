@@ -1,0 +1,49 @@
+# Dev artifacts
+.vercel
+.DS_Store
+.playwright-mcp/
+.claude/
+node_modules/
+*.zip
+
+# Frames / video production
+frames-peleg/
+frames-shon/
+
+# Screenshots & comparisons (dev only)
+*.png
+!images/**/*.png
+!peleg-cutout.png
+!shon-cutout.png
+!peleg-whatiscc.png
+
+# Dev reference files
+scraped-*
+screenshots/
+original-*
+replica-*-fullpage*
+fullpage-*
+
+# Old HTML versions
+workshop-homepage-*.html
+workshop-webinar-*.html
+replica-A.html
+replica-B.html
+replica-brainers.html
+pelegdror-scroll.html
+
+# Misc dev files
+dm-skill-messages.txt
+manual-hebrew.txt
+website-copy.txt
+workshop-copy.md
+*.json
+!package.json
+!package-lock.json
+claude-code-desktop-features.mp4
+video-preview-*.jpg
+*.pdf
+peleg-aiapp-snapshot.md
+scraped-*.md
+stripe-sessions-snapshot.md
+tasks/

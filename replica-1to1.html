@@ -356,7 +356,7 @@
 }
 .ws-hero h1 {
   font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
-  font-size: 68px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--white);
   text-transform: none;
@@ -945,7 +945,7 @@
   transition: max-height 0.4s ease, padding 0.3s ease;
 }
 .ws-module-open .ws-module-body {
-  max-height: 500px;
+  max-height: 800px;
   padding: 0 25px 25px;
 }
 .ws-module-body .ws-check-list {
@@ -1373,6 +1373,32 @@
   text-align: center;
   margin-bottom: 40px;
 }
+.ws-spots-indicator {
+  max-width: 340px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+.ws-spots-bar {
+  width: 100%;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.ws-spots-filled {
+  height: 100%;
+  background: linear-gradient(90deg, var(--purple), var(--yellow));
+  border-radius: 7px;
+  transition: width 1s ease;
+}
+.ws-spots-text {
+  margin-top: 10px;
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
 .ws-form {
   max-width: 500px;
   margin: 0 auto;
@@ -1504,7 +1530,7 @@
   .ws-container { padding: 0 30px; }
   .ws-hero .ws-container { flex-direction: column; }
   .ws-hero-visual { width: 100% !important; max-width: 100% !important; margin: 20px auto !important; }
-  .ws-hero h1 { font-size: 59px; }
+  .ws-hero h1 { font-size: 40px; }
   .ws-whatiscc .ws-container { flex-direction: column; }
   .ws-whatiscc-image { flex: none; width: 100%; max-width: 400px; height: 300px; margin: 0 auto; }
   .ws-comparison-grid { grid-template-columns: 1fr; }
@@ -1520,7 +1546,7 @@
 @media (max-width: 767px) {
   .ws-container { padding: 0 20px; }
   .ws-hero { padding: 100px 0 40px; min-height: auto; }
-  .ws-hero h1 { font-size: 47px; letter-spacing: 2px; }
+  .ws-hero h1 { font-size: 28px; letter-spacing: 1px; }
   .ws-mobile-break { display: inline; }
   .ws-hero-subtitle { font-size: 18px; margin-top: 25px; margin-bottom: 20px; }
   .ws-hero-body { font-size: 16px; }
@@ -1611,7 +1637,7 @@
 
 /* ========== RESPONSIVE 480px ========== */
 @media (max-width: 480px) {
-  .ws-hero h1 { font-size: 47px; letter-spacing: 1px; }
+  .ws-hero h1 { font-size: 26px; letter-spacing: 1px; }
   .ws-hero-subtitle { font-size: 15px; margin-bottom: 30px; }
   .ws-hero-pills { gap: 10px; }
   .ws-pill { font-size: 14px; padding: 8px 18px; }
@@ -1770,7 +1796,7 @@
   <section class="ws-hero ws-section-dark">
     <div class="ws-container" style="flex-direction: column; text-align: center;">
       <div class="ws-hero-content" style="text-align: center;">
-        <h1 class="ws-animate">ללמוד את התחום<br class="ws-mobile-break"> <span style="color: var(--purple);">הכי חם</span> ב2026<br><span style="color: var(--purple);">Claude Code</span><br>וליצור את <span style="color: var(--purple);">האפליקציה/המוצר הדיגיטלי הראשון</span> שלך<br>בסדנה פרונטלית ממוקדמת של <span style="color: var(--purple);">5 שעות</span></h1>
+        <h1 class="ws-animate">ליצור את <span style="color: var(--purple);">האפליקציה/המוצר הדיגיטלי</span><br class="ws-mobile-break"> <span style="color: var(--purple);">הראשון</span> שלך<br>בפחות מ-<span style="color: var(--purple);">5 שעות</span><br class="ws-mobile-break"> עם ליווי אישי מאיתנו<br>בסדנה פרונטלית ממוקדת</h1>
         <div class="ws-hero-body ws-animate ws-animate-delay-1">
           <p>אם כבר הבנת שלדעת לעבוד עם קלוד קוד היום זה <span style="color: var(--purple); font-weight: 700;">חובה</span><br>אנחנו כאן כדי ללוות אותך <span style="color: var(--purple); font-weight: 700;">צעד אחר צעד</span> - גם אם אין לך שום ניסיון או רקע טכני</p>
         </div>
@@ -1882,8 +1908,13 @@
   <!-- REGISTRATION FORM COPY (dark bg, no countdown) -->
   <section class="ws-registration ws-section-dark" style="border-top: 1px solid rgba(224,122,58,0.15);">
     <div class="ws-container">
-      <h2 class="ws-section-title ws-animate" style="font-size: 48px;">להרשמה לסדנה הקרובה<br>השאירו את פרטיכם בטופס</h2>
-      <p class="ws-section-subtitle ws-animate ws-animate-delay-1">מספר המקומות מוגבל ל-8 משתתפים בלבד.</p>
+      <h2 class="ws-section-title ws-animate" style="font-size: 32px;">להרשמה לסדנה הקרובה<br>השאירו את פרטיכם בטופס</h2>
+      <div class="ws-spots-indicator ws-animate ws-animate-delay-1">
+        <div class="ws-spots-bar">
+          <div class="ws-spots-filled" style="width: 62.5%;"></div>
+        </div>
+        <p class="ws-spots-text"><span style="color: var(--yellow); font-weight: 700;">5/8</span> מקומות נתפסו</p>
+      </div>
       <form class="ws-form ws-animate ws-animate-delay-2" action="#" method="POST">
         <input type="text" name="name" placeholder="השם שלך" required>
         <input type="tel" name="phone" placeholder="מספר טלפון" required>
@@ -1940,23 +1971,23 @@
       <h2 class="ws-section-title ws-animate" style="font-family: 'Discovery', 'Noto Sans Hebrew', sans-serif; font-size: 52px; font-weight: 700; color: var(--yellow); text-transform: uppercase; letter-spacing: 1px; line-height: 1.1em; text-align: center; margin-bottom: 40px;">מה תדעו לעשות אחרי הסדנה</h2>
       <div class="ws-skills-grid">
         <div class="ws-skill-card ws-animate">
-          <div class="ws-skill-card-icon" style="background: none; width: 105px; height: 105px;"><dotlottie-wc src="https://lottie.host/9f3dc8c8-71ba-4ac9-b5cc-f87cc2f6bb03/dcPZog2CHn.lottie" style="width: 105px; height: 105px;" autoplay loop></dotlottie-wc></div>
+          <div class="ws-skill-card-icon" style="background: none; width: 140px; height: 140px;"><dotlottie-wc src="https://lottie.host/9f3dc8c8-71ba-4ac9-b5cc-f87cc2f6bb03/dcPZog2CHn.lottie" style="width: 140px; height: 140px;" autoplay loop></dotlottie-wc></div>
           <p>דף נחיתה או אתר ברמה בינלאומית</p>
         </div>
         <div class="ws-skill-card ws-animate ws-animate-delay-1">
-          <div class="ws-skill-card-icon" style="background: none; width: 105px; height: 105px;"><dotlottie-wc src="https://lottie.host/88f53f77-c76f-46be-a43a-4a005b65efd5/8YRtTQWf8c.lottie" style="width: 105px; height: 105px;" autoplay loop></dotlottie-wc></div>
+          <div class="ws-skill-card-icon" style="background: none; width: 140px; height: 140px;"><dotlottie-wc src="https://lottie.host/88f53f77-c76f-46be-a43a-4a005b65efd5/8YRtTQWf8c.lottie" style="width: 140px; height: 140px;" autoplay loop></dotlottie-wc></div>
           <p>יצירת אפליקציות ומוצרים דיגיטליים</p>
         </div>
         <div class="ws-skill-card ws-animate ws-animate-delay-2">
-          <div class="ws-skill-card-icon" style="background: none; width: 105px; height: 105px;"><dotlottie-wc src="https://lottie.host/fc59dbe9-d0bb-4cea-9e4a-e9cd1d0505fa/V4n3qKfm0A.lottie" style="width: 105px; height: 105px;" autoplay loop></dotlottie-wc></div>
+          <div class="ws-skill-card-icon" style="background: none; width: 140px; height: 140px;"><dotlottie-wc src="https://lottie.host/fc59dbe9-d0bb-4cea-9e4a-e9cd1d0505fa/V4n3qKfm0A.lottie" style="width: 140px; height: 140px;" autoplay loop></dotlottie-wc></div>
           <p>יצירת אוטומציות</p>
         </div>
         <div class="ws-skill-card ws-animate ws-animate-delay-3">
-          <div class="ws-skill-card-icon" style="background: none; width: 105px; height: 105px;"><dotlottie-wc src="https://lottie.host/a6d73241-4565-4859-b989-1371b3085103/lJEl4i1Ql4.lottie" style="width: 105px; height: 105px;" autoplay loop></dotlottie-wc></div>
+          <div class="ws-skill-card-icon" style="background: none; width: 140px; height: 140px;"><dotlottie-wc src="https://lottie.host/a6d73241-4565-4859-b989-1371b3085103/lJEl4i1Ql4.lottie" style="width: 140px; height: 140px;" autoplay loop></dotlottie-wc></div>
           <p>כלים למשימות היומיומיות</p>
         </div>
         <div class="ws-skill-card ws-animate ws-animate-delay-4">
-          <div class="ws-skill-card-icon" style="background: none; width: 105px; height: 105px;"><dotlottie-wc src="https://lottie.host/9b5d8279-d33c-43a7-bbe3-7f4a25452e11/iB1fpSjf06.lottie" style="width: 105px; height: 105px;" autoplay loop></dotlottie-wc></div>
+          <div class="ws-skill-card-icon" style="background: none; width: 140px; height: 140px;"><dotlottie-wc src="https://lottie.host/9b5d8279-d33c-43a7-bbe3-7f4a25452e11/iB1fpSjf06.lottie" style="width: 140px; height: 140px;" autoplay loop></dotlottie-wc></div>
           <p>יצירת סוכני AI</p>
         </div>
       </div>
@@ -2016,7 +2047,7 @@
           <div class="ws-module-header" onclick="wsToggleModule(this)">
             <div class="ws-module-header-right">
               <span class="ws-module-num">1</span>
-              <span class="ws-module-title">מינגלינג ו-Setup</span>
+              <span class="ws-module-title">מינגלינג והקמה</span>
             </div>
             <div style="display:flex;align-items:center;gap:15px;">
               <span class="ws-module-time">16:30</span>

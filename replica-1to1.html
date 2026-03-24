@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>סדנת Claude Code - AI Agent School</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700;800&family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700;800&family=Lato:wght@400;700;900&family=Press+Start+2P&display=swap');
 
 /* ========== CUSTOM FONTS FROM AIAGENTSCHOOL ========== */
 @font-face {
@@ -34,14 +34,44 @@
 }
 @font-face {
   font-family: 'Discovery';
-  src: url('https://aiagentschool.co.il/wp-content/uploads/2026/02/Discovery_Fs-Light.woff2') format('woff2');
+  src: url('Discovery_Fs-Light.woff2') format('woff2'), url('Discovery_Fs-Light.woff') format('woff');
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: 'Discovery';
-  src: url('https://aiagentschool.co.il/wp-content/uploads/2026/02/Discovery_Fs-Bold.woff2') format('woff2');
+  src: url('Discovery_Fs-Light.woff2') format('woff2'), url('Discovery_Fs-Light.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Discovery';
+  src: url('Discovery_Fs-Light.woff2') format('woff2'), url('Discovery_Fs-Light.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Discovery';
+  src: url('Discovery_Fs-Light.woff2') format('woff2'), url('Discovery_Fs-Light.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Discovery';
+  src: url('Discovery_Fs-Bold.woff2') format('woff2'), url('Discovery_Fs-Bold.woff') format('woff');
   font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Discovery';
+  src: url('Discovery_Fs-Bold.woff2') format('woff2'), url('Discovery_Fs-Bold.woff') format('woff');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Discovery';
+  src: url('Discovery_Fs-Bold.woff2') format('woff2'), url('Discovery_Fs-Bold.woff') format('woff');
+  font-weight: 900;
   font-display: swap;
 }
 
@@ -265,14 +295,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.ws-logo {
-  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--yellow);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+/* .ws-logo styles moved to HEADER LOGO section below */
 .ws-header-btn {
   background-color: rgba(191, 90, 30, 0.85);
   border: none;
@@ -376,8 +399,8 @@
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
-  margin-top: 60px;
-  margin-bottom: 50px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 .ws-pill {
   background: rgba(224, 122, 58, 0.25);
@@ -398,9 +421,8 @@
   font-size: 18px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 15px;
   line-height: 1.7em;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 .ws-hero .ws-cta-btn { font-size: 28px; padding: 20px 50px; }
 
@@ -1185,6 +1207,7 @@
   color: var(--yellow);
   letter-spacing: 2px;
   line-height: 1;
+  white-space: nowrap;
 }
 .ws-price-note {
   font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
@@ -1555,7 +1578,6 @@
   .ws-pill { width: 100%; max-width: 300px; justify-content: center; }
 
   /* Header mobile */
-  .ws-logo { font-size: 18px; letter-spacing: 1px; }
   .ws-header-btn { font-size: 13px; padding: 8px 14px; white-space: nowrap; }
 
   /* Sections padding */
@@ -1641,7 +1663,6 @@
   .ws-hero-subtitle { font-size: 15px; margin-bottom: 30px; }
   .ws-hero-pills { gap: 10px; }
   .ws-pill { font-size: 14px; padding: 8px 18px; }
-  .ws-logo { font-size: 16px; }
 
   .ws-whatiscc .ws-section-title, .ws-comparison .ws-section-title,
   .ws-about .ws-section-title, .ws-curriculum .ws-section-title,
@@ -1777,6 +1798,284 @@
 @media (max-width: 767px) {
   .ws-whatsapp-grid { grid-template-columns: 1fr; }
 }
+
+/* ========== HTML/BODY RESET + FULL WIDTH ========== */
+html, body { margin: 0; padding: 0; box-sizing: border-box; }
+.ws-wrapper { width: 100%; }
+
+/* ========== FONT SIZE SCALING FOR DISCOVERY ========== */
+.ws-hero h1 { font-size: 44px; }
+.ws-hero-subtitle { font-size: 24px; }
+.ws-hero-body { font-size: 19px; }
+.ws-cta-btn { font-size: 27px; }
+.ws-hero .ws-cta-btn { font-size: 30px; padding: 20px 50px; }
+.ws-counter-number { font-size: 58px; }
+.ws-whatiscc .ws-section-title { font-size: 55px; }
+.ws-comparison .ws-section-title { font-size: 55px; }
+.ws-about .ws-section-title { font-size: 58px; }
+.ws-video-rec .ws-section-title { font-size: 58px; }
+.ws-curriculum .ws-section-title { font-size: 58px; }
+.ws-bonuses .ws-section-title { font-size: 58px; }
+.ws-forwhom .ws-section-title { font-size: 55px; }
+.ws-pricing .ws-section-title { font-size: 58px; }
+.ws-faq .ws-section-title { font-size: 58px; }
+.ws-registration .ws-section-title { font-size: 58px; }
+.ws-comparison-card-title { font-size: 49px; }
+.ws-module-title { font-size: 21px; }
+.ws-check-item { font-size: 19px; }
+.ws-comparison-item { font-size: 19px; }
+.ws-forwhom-item { font-size: 19px; }
+.ws-whatiscc-body { font-size: 20px; }
+.ws-price-amount { font-size: 88px; }
+.ws-footer-name { font-size: 39px; }
+.ws-footer-text { font-size: 22px; }
+
+/* ========== HERO TOP BADGE ========== */
+@keyframes ws-badge-slide-in {
+  from { opacity: 0; transform: translateY(-16px) scale(0.94); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes ws-pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.65); }
+}
+.ws-hero-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid rgba(255, 109, 31, 0.65);
+  border-radius: 50px;
+  padding: 10px 24px;
+  background: rgba(255, 109, 31, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  margin-bottom: 24px;
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.93);
+  letter-spacing: 0.4px;
+  animation: ws-badge-slide-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+  cursor: default;
+}
+.ws-badge-dot {
+  width: 9px; height: 9px;
+  background: var(--yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: ws-pulse-dot 2s ease-in-out infinite;
+}
+
+/* ========== COHORT BADGE ========== */
+.ws-cohort-badge {
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.3em;
+  background: linear-gradient(135deg, rgba(255,109,31,0.18) 0%, rgba(255,143,79,0.08) 100%);
+  border: 1px solid rgba(255,109,31,0.45);
+  border-radius: 12px;
+  padding: 13px 28px;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+/* ========== TESTIMONIAL MARQUEE ========== */
+.ws-testi-marquee-section {
+  padding: 60px 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #181818 0%, #141414 100%);
+  position: relative;
+}
+.ws-testi-marquee-section::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(224,122,58,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(244,162,97,0.05) 0%, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(255,255,255,0.02) 49px, rgba(255,255,255,0.02) 50px),
+    repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(255,255,255,0.02) 49px, rgba(255,255,255,0.02) 50px);
+  pointer-events: none; z-index: 0;
+}
+.ws-testi-marquee-section > * { position: relative; z-index: 1; }
+.ws-testi-marquee-title {
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 52px; font-weight: 700;
+  color: var(--yellow);
+  text-transform: uppercase; letter-spacing: 1px; line-height: 1.1em;
+  text-align: center; margin-bottom: 10px;
+}
+.ws-testi-divider-zigzag {
+  width: 25%; height: 20px;
+  margin: 0 auto 35px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' overflow='visible' height='100%25' viewBox='0 0 24 24' fill='none' stroke='%23E07A3A' stroke-width='3' stroke-linecap='square' stroke-miterlimit='10'%3E%3Cpolyline points='0,18 12,6 24,18 '/%3E%3C/svg%3E");
+  background-repeat: repeat-x; background-size: 20px 20px;
+}
+.ws-testi-track {
+  overflow: hidden; position: relative; direction: ltr;
+}
+.ws-testi-track::before, .ws-testi-track::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2;
+}
+.ws-testi-track::before { right: 0; background: linear-gradient(to left, #181818, transparent); }
+.ws-testi-track::after  { left: 0;  background: linear-gradient(to right, #181818, transparent); }
+.ws-testi-inner {
+  display: flex; gap: 20px;
+  animation: ws-marquee 38s linear infinite;
+  width: max-content; padding: 10px 0;
+}
+.ws-testi-card {
+  flex-shrink: 0; width: 300px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,109,31,0.25);
+  border-radius: 14px;
+  padding: 22px 20px;
+  direction: rtl; text-align: right;
+  transition: border-color 0.3s;
+}
+.ws-testi-card:hover { border-color: rgba(255,109,31,0.6); }
+.ws-testi-card-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 14px; justify-content: flex-end;
+}
+.ws-testi-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--yellow));
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 17px; font-weight: 700; color: white; flex-shrink: 0;
+}
+.ws-testi-name {
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 15px; font-weight: 700; color: var(--white);
+}
+.ws-testi-role {
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.5); margin-top: 2px;
+}
+.ws-testi-stars { color: var(--yellow); font-size: 14px; margin-bottom: 10px; }
+.ws-testi-quote {
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 15px; font-weight: 400;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.7em; font-style: italic;
+}
+
+/* ========== SPOTS BAR ANIMATION ========== */
+@keyframes ws-spots-load {
+  from { width: 0%; }
+  to   { width: 62.5%; }
+}
+@keyframes ws-spots-blink {
+  0%, 100% { opacity: 1; }
+  35%       { opacity: 0.1; }
+  65%       { opacity: 0.1; }
+}
+.ws-spots-filled-anim {
+  animation: ws-spots-load 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.ws-spots-count-blink {
+  animation: ws-spots-blink 0.55s ease-in-out 2;
+}
+
+/* ========== SECTION 6 PARAGRAPH + SMALL CTA ========== */
+.ws-hero-body-paragraph {
+  max-width: 640px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+.ws-hero-body-paragraph p {
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 18px; font-weight: 400;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65em; margin-bottom: 10px;
+}
+.ws-cta-btn-sm {
+  font-size: 21px !important;
+  padding: 14px 36px !important;
+}
+
+/* ========== HEADER LOGO (CSS pixel style) ========== */
+.ws-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  line-height: 1;
+}
+.ws-logo-cc {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 15px;
+  color: var(--yellow);
+  letter-spacing: 1px;
+  word-spacing: -4px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+  display: block;
+}
+.ws-logo-sub {
+  font-family: "Noto Sans Hebrew", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  direction: rtl;
+  display: block;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .ws-logo-cc { font-size: 12px; }
+  .ws-logo-sub { font-size: 12px; }
+}
+@media (max-width: 480px) {
+  .ws-logo-cc { font-size: 11px; }
+  .ws-logo-sub { font-size: 11px; }
+}
+
+/* ========== VIDEO TOP BAR ========== */
+.ws-video-top-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 5;
+  background: var(--purple);
+  color: #fff;
+  text-align: center;
+  padding: 9px 16px;
+  font-family: "Discovery", "Noto Sans Hebrew", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  direction: rtl;
+  letter-spacing: 0.3px;
+  border-radius: 15px 15px 0 0;
+}
+@media (max-width: 767px) {
+  .ws-video-top-bar { font-size: 14px; padding: 7px 12px; }
+}
+
+/* ========== HERO PHRASE (keep as one unit on mobile) ========== */
+.ws-hero-phrase { color: var(--purple); }
+@media (max-width: 767px) {
+  .ws-hero-phrase {
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+}
+
+/* ========== RESPONSIVE UPDATES ========== */
+@media (max-width: 767px) {
+  .ws-hero h1 { font-size: 30px; }
+  .ws-hero-top-badge { font-size: 14px; padding: 8px 16px; }
+  .ws-cohort-badge { font-size: 14px; padding: 10px 14px; }
+  .ws-testi-marquee-title { font-size: 36px; }
+  .ws-testi-card { width: 265px; }
+}
+@media (max-width: 480px) {
+  .ws-hero h1 { font-size: 27px; }
+  .ws-hero-top-badge { font-size: 13px; padding: 7px 14px; }
+  .ws-testi-marquee-title { font-size: 28px; }
+}
 </style>
 <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.3/dist/dotlottie-wc.js" type="module"></script>
 </head>
@@ -1787,7 +2086,10 @@
   <!-- HEADER -->
   <header class="ws-header">
     <div class="ws-header-inner">
-      <div class="ws-logo">סדנה פרונטלית - Claude Code</div>
+      <div class="ws-logo">
+        <span class="ws-logo-cc">CLAUDE CODE</span>
+        <span class="ws-logo-sub">סדנה פרונטלית</span>
+      </div>
       <a href="#ws-register" class="ws-header-btn">אני רוצה מקום</a>
     </div>
   </header>
@@ -1796,31 +2098,32 @@
   <section class="ws-hero ws-section-dark">
     <div class="ws-container" style="flex-direction: column; text-align: center;">
       <div class="ws-hero-content" style="text-align: center;">
-        <h1 class="ws-animate">ליצור את <span style="color: var(--purple);">האפליקציה/המוצר הדיגיטלי</span><br class="ws-mobile-break"> <span style="color: var(--purple);">הראשון</span> שלך<br>בפחות מ-<span style="color: var(--purple);">5 שעות</span><br class="ws-mobile-break"> עם ליווי אישי מאיתנו<br>בסדנה פרונטלית ממוקדת</h1>
+        <div class="ws-hero-top-badge"><span class="ws-badge-dot"></span>ללמוד את התחום הכי חם ב-2026 - Claude Code</div>
+        <h1 class="ws-animate">ליצור את <span class="ws-hero-phrase" style="color: var(--purple);">האפליקציה&#x2060;/&#x2060;המוצר הדיגיטלי הראשון שלך</span><br>בפחות מ-<span style="color: var(--purple);">5 שעות</span><br class="ws-mobile-break"> עם ליווי אישי מאיתנו<br>בסדנה פרונטלית ממוקדת</h1>
         <div class="ws-hero-body ws-animate ws-animate-delay-1">
           <p>אם כבר הבנת שלדעת לעבוד עם קלוד קוד היום זה <span style="color: var(--purple); font-weight: 700;">חובה</span><br>אנחנו כאן כדי ללוות אותך <span style="color: var(--purple); font-weight: 700;">צעד אחר צעד</span> - גם אם אין לך שום ניסיון או רקע טכני</p>
         </div>
       </div>
-      <div class="ws-hero-visual ws-animate ws-animate-delay-2" style="flex: none; width: 100%; max-width: 800px; margin: 30px auto;">
-        <div class="ws-hero-visual-box" style="width: 100%; max-width: 800px;">
-          <iframe width="100%" height="100%" src="https://player.vimeo.com/video/1175909295?autoplay=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:16px;"></iframe>
+      <div class="ws-hero-visual ws-animate ws-animate-delay-2" style="flex: none; width: 100%; max-width: 800px; margin: 5px auto;">
+        <div style="width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,109,31,0.25);">
+          <div class="ws-video-top-bar" style="position: relative; top: auto; left: auto; right: auto; border-radius: 0;">צפו בסרטון לכל המידע על הסדנה 🔊</div>
+          <div style="position: relative; width: 100%; padding-top: 56.25%;">
+            <iframe src="https://player.vimeo.com/video/1175909295?autoplay=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;"></iframe>
+          </div>
         </div>
       </div>
       <div class="ws-hero-content" style="text-align: center;">
-        <p class="ws-hero-subtitle ws-animate ws-animate-delay-2">סדנת Claude Code פרונטלית - 8 משתתפים בלבד</p>
+        <div class="ws-cohort-badge ws-animate ws-animate-delay-2">סדנת Claude Code פרונטלית – <span style="color: var(--yellow);">מחזור #3</span> יוצא לדרך</div>
         <div class="ws-hero-pills ws-animate ws-animate-delay-3" style="justify-content: center;">
           <span class="ws-pill"><span class="ws-pill-icon">&#128197;</span> יום שני, 30.03.2026</span>
           <span class="ws-pill"><span class="ws-pill-icon">&#9201;</span> 16:30-22:00</span>
           <span class="ws-pill"><span class="ws-pill-icon">&#128205;</span> סקיי טאוור, תל אביב</span>
         </div>
-        <div class="ws-hero-body ws-animate ws-animate-delay-3">
-          <p>בסדנה הזאת אתם לא יושבים ומקשיבים.<br>אתם פותחים לפטופ ובונים.</p>
-          <br>
-          <p>אנחנו כאן כדי ללוות אתכם מההתקנה הראשונה ועד הרגע שהמוצר באוויר.<br>
-          עם כל הידע שצברנו בפיתוח אפליקציות ומוצרים דיגיטליים שמכניסים כסף<br>
-          הצטרפו אלינו לסדנת ערב אינטנסיבית שבסופה תצאו מאסטרים בקלוד קוד.</p>
+        <div class="ws-hero-body-paragraph ws-animate ws-animate-delay-3">
+          <p>בסדנה הזאת אתם לא יושבים ומקשיבים. אתם פותחים לפטופ ובונים.</p>
+          <p>אנחנו כאן כדי ללוות אתכם מההתקנה הראשונה ועד הרגע שהמוצר באוויר. עם כל הידע שצברנו בפיתוח אפליקציות ומוצרים דיגיטליים שמכניסים כסף, הצטרפו אלינו לסדנת ערב אינטנסיבית שבסופה תצאו מאסטרים בקלוד קוד.</p>
         </div>
-        <a href="#ws-register" class="ws-cta-btn ws-animate ws-animate-delay-3">נשמע מעניין - אני בפנים!</a>
+        <a href="#ws-register" class="ws-cta-btn ws-cta-btn-sm ws-animate ws-animate-delay-3">נשמע מעניין - אני בפנים!</a>
       </div>
     </div>
   </section>
@@ -1908,12 +2211,12 @@
   <!-- REGISTRATION FORM COPY (dark bg, no countdown) -->
   <section class="ws-registration ws-section-dark" style="border-top: 1px solid rgba(224,122,58,0.15);">
     <div class="ws-container">
-      <h2 class="ws-section-title ws-animate" style="font-size: 32px;">להרשמה לסדנה הקרובה<br>השאירו את פרטיכם בטופס</h2>
+      <h2 class="ws-section-title ws-animate" style="font-size: 26px;">להרשמה לסדנה הקרובה<br>השאירו את פרטיכם בטופס</h2>
       <div class="ws-spots-indicator ws-animate ws-animate-delay-1">
         <div class="ws-spots-bar">
-          <div class="ws-spots-filled" style="width: 62.5%;"></div>
+          <div class="ws-spots-filled" id="ws-spots-bar-1" style="width: 0%;"></div>
         </div>
-        <p class="ws-spots-text"><span style="color: var(--yellow); font-weight: 700;">5/8</span> מקומות נתפסו</p>
+        <p class="ws-spots-text"><span id="ws-spots-count-1" style="color: var(--yellow); font-weight: 700;">5/8</span> מקומות נתפסו</p>
       </div>
       <form class="ws-form ws-animate ws-animate-delay-2" action="#" method="POST">
         <input type="text" name="name" placeholder="השם שלך" required>
@@ -2303,13 +2606,112 @@
   </section>
 
 
-  <!-- WHATSAPP TESTIMONIALS (cream bg) -->
-  <section class="ws-section-cream" style="padding: 60px 0;">
+  <!-- TESTIMONIALS MARQUEE (dark bg) -->
+  <section class="ws-testi-marquee-section">
     <div class="ws-container">
-      <h2 class="ws-section-title ws-animate" style="color: var(--black); font-family: 'Discovery', 'Noto Sans Hebrew', sans-serif; font-size: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; line-height: 1.1em; text-align: center; margin-bottom: 15px;">מה אומרים המשתתפים</h2>
-      <div class="ws-divider-zigzag" style="width: 25%; margin: 0 auto 35px;"></div>
-      <div class="ws-animate" style="text-align: center;">
-        <img src="images/workshop/whatsapp-testimonials.png" alt="מה אומרים המשתתפים בוואטסאפ" style="max-width: 100%; border-radius: 12px;">
+      <h2 class="ws-testi-marquee-title ws-animate">מה אומרים המשתתפים</h2>
+      <div class="ws-testi-divider-zigzag"></div>
+    </div>
+    <div class="ws-testi-track">
+      <div class="ws-testi-inner">
+        <!-- HALF A -->
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">ירון ברגר</div><div class="ws-testi-role">יזם</div></div>
+            <div class="ws-testi-avatar">י</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"יצאתי עם אפליקציה עובדת שלא ידעתי בכלל לבנות. הסדנה שינתה לי את הדרך לחשוב על פיתוח מוצרים."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">סיון קליקה</div><div class="ws-testi-role">בעלת עסק</div></div>
+            <div class="ws-testi-avatar">ס</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"חשבתי שצריך רקע טכני. טעיתי לגמרי. בתוך שעתיים כבר בניתי משהו עובד ולא ידעתי איך זה קרה."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">אביב חרובי</div><div class="ws-testi-role">פרילנסר</div></div>
+            <div class="ws-testi-avatar">א</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"הליווי האישי שקיבלתי הוא מה שמבדיל את הסדנה הזו. פלג ושון זמינים לכל שאלה בזמן אמת."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">ויקטוריה שמואלי</div><div class="ws-testi-role">מנהלת שיווק</div></div>
+            <div class="ws-testi-avatar">ו</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"5 שעות שהיו שוות הרבה יותר מכל קורס שעשיתי. יצאתי עם מוצר חי ועם הביטחון להמשיך לבד."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">דניאל כ.</div><div class="ws-testi-role">יועץ עסקי</div></div>
+            <div class="ws-testi-avatar">ד</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"יצאתי עם מוצר חי, עם דומיין, ועם הביטחון לבנות עוד. בלתי נתפס מה אפשר לעשות בשעות בודדות."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">מיכל ב.</div><div class="ws-testi-role">מעצבת</div></div>
+            <div class="ws-testi-avatar">מ</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"לא האמנתי שאני אצא מהסדנה עם פרויקט עובד. פלג מסביר בצורה כל כך ברורה שממש אי אפשר לא להבין."</p>
+        </div>
+        <!-- HALF B (duplicate for seamless loop) -->
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">ירון ברגר</div><div class="ws-testi-role">יזם</div></div>
+            <div class="ws-testi-avatar">י</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"יצאתי עם אפליקציה עובדת שלא ידעתי בכלל לבנות. הסדנה שינתה לי את הדרך לחשוב על פיתוח מוצרים."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">סיון קליקה</div><div class="ws-testi-role">בעלת עסק</div></div>
+            <div class="ws-testi-avatar">ס</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"חשבתי שצריך רקע טכני. טעיתי לגמרי. בתוך שעתיים כבר בניתי משהו עובד ולא ידעתי איך זה קרה."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">אביב חרובי</div><div class="ws-testi-role">פרילנסר</div></div>
+            <div class="ws-testi-avatar">א</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"הליווי האישי שקיבלתי הוא מה שמבדיל את הסדנה הזו. פלג ושון זמינים לכל שאלה בזמן אמת."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">ויקטוריה שמואלי</div><div class="ws-testi-role">מנהלת שיווק</div></div>
+            <div class="ws-testi-avatar">ו</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"5 שעות שהיו שוות הרבה יותר מכל קורס שעשיתי. יצאתי עם מוצר חי ועם הביטחון להמשיך לבד."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">דניאל כ.</div><div class="ws-testi-role">יועץ עסקי</div></div>
+            <div class="ws-testi-avatar">ד</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"יצאתי עם מוצר חי, עם דומיין, ועם הביטחון לבנות עוד. בלתי נתפס מה אפשר לעשות בשעות בודדות."</p>
+        </div>
+        <div class="ws-testi-card">
+          <div class="ws-testi-card-header">
+            <div><div class="ws-testi-name">מיכל ב.</div><div class="ws-testi-role">מעצבת</div></div>
+            <div class="ws-testi-avatar">מ</div>
+          </div>
+          <div class="ws-testi-stars">★★★★★</div>
+          <p class="ws-testi-quote">"לא האמנתי שאני אצא מהסדנה עם פרויקט עובד. פלג מסביר בצורה כל כך ברורה שממש אי אפשר לא להבין."</p>
+        </div>
       </div>
     </div>
   </section>
@@ -2319,8 +2721,8 @@
     <div class="ws-container">
       <h2 class="ws-section-title ws-animate">כמה זה עולה?</h2>
       <div class="ws-price-box ws-animate ws-animate-delay-1">
-        <div class="ws-price-old">2,500 ש"ח</div>
-        <div class="ws-price-amount">1,500 ש"ח</div>
+        <div class="ws-price-old">4,000 ש"ח</div>
+        <div class="ws-price-amount">1,500 ₪</div>
         <div class="ws-price-note">למשתתף, לפני מע"מ</div>
         <div class="ws-price-vat">כולל מע"מ (18%): 1,770 ש"ח</div>
         <div class="ws-price-body">המחיר כולל את כל תכני הסדנה, חבילת הכלים שלי, סשן הסיכום בזום, גישה לקבוצת הוואטסאפ, וערכת הפיקוד המהיר.</div>
@@ -2628,6 +3030,37 @@ function wsToggleModule(el) {
     card.classList.add('ws-module-open');
   }
 }
+
+// ========== SPOTS BAR ANIMATION ==========
+(function() {
+  var spotsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var indicator = entry.target;
+        var bar = indicator.querySelector('.ws-spots-filled');
+        var countEl = indicator.querySelector('.ws-spots-text span');
+        if (bar && !bar.dataset.animated) {
+          bar.dataset.animated = '1';
+          setTimeout(function() {
+            bar.classList.add('ws-spots-filled-anim');
+          }, 300);
+          if (countEl) {
+            setTimeout(function() {
+              countEl.classList.add('ws-spots-count-blink');
+              countEl.addEventListener('animationend', function() {
+                countEl.classList.remove('ws-spots-count-blink');
+              }, { once: true });
+            }, 2000);
+          }
+        }
+        spotsObserver.unobserve(indicator);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.ws-spots-indicator').forEach(function(el) {
+    spotsObserver.observe(el);
+  });
+})();
 </script>
 
 </body>
